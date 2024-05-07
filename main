@@ -1,3 +1,8 @@
+import requests
+from bs4 import BeautifulSoup
+import csv
+import requests
+
 api_key = "your custom google search key"
 cse_id = "your cse_id"
 
