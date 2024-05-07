@@ -1,0 +1,7 @@
+# Helper function to clean company names
+def clean_company_name(name):
+    # List of common business entity types
+    suffixes = [' AG', ' GmbH', ' SE', ' KG', ' LLC', ' Inc']
+    for suffix in suffixes:
+        name = name.replace(suffix, '')
+    return name.strip()
