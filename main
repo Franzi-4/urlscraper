@@ -28,3 +28,4 @@ with open("results.csv", "w", newline='') as result_file:
             search_results = response.json()
             link = search_results['items'][0]['link'] if 'items' in search_results and len(search_results['items']) > 0 else 'No URL Found'
             writer.writerow([company, clean_company_name(company), link])
+fetch_company_websites(api_key="Placeholder", cse_id="Placeholder", input_csv_name="sme.csv", output_csv_name="results.csv")
