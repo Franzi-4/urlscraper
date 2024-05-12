@@ -6,12 +6,11 @@ import requests
 api_key = "your custom google search key"
 cse_id = "your cse_id"
 
-# Read company names from the CSV
+# CSV loaded in IDE
 with open("SME.csv", "r") as file:
     reader = csv.reader(file)
     companies = [clean_company_name(row[0]) for row in reader if row]  # Apply cleaning and skip empty rows
 
-# Write results to a new CSV file
 with open("results.csv", "w", newline='') as result_file:
     writer = csv.writer(result_file)
     writer.writerow(['Original Company', 'Cleaned Company', 'Extracted URL'])  # Adding cleaned company to the header
